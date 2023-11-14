@@ -1,0 +1,251 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap");
+
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Root CSS */
+:root {
+  --primaryColor: #04aa6d;
+}
+
+body {
+  width: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #ededed;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: #1d2a35;
+  display: flex;
+  align-items: center;
+}
+
+.green-school-logo {
+  margin: 0 25px;
+
+  & h2 {
+    color: var(--primaryColor);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 0.7;
+
+    & span {
+      font-size: 18px;
+      margin-left: -12px;
+    }
+  }
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  & a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 0 10px;
+
+    &:hover {
+      background-color: var(--primaryColor);
+    }
+
+    & .fa-solid {
+      font-size: 15px;
+      margin-left: 5px;
+      /* color: var(--primaryColor); */
+    }
+  }
+  & input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+
+    &:focus {
+      outline: 3px solid var(--primaryColor);
+    }
+  }
+
+  .fa-magnifying-glass {
+    color: bl;
+    font-size: 20px;
+    font-weight: 600;
+    transform: translateX(-30px);
+  }
+
+  .fa-circle-half-stroke {
+    color: white;
+    padding: 10px;
+
+    &:hover {
+      background-color: #38444d;
+      border-radius: 20px;
+    }
+  }
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  margin-right: 20px;
+  & a {
+    display: block;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    /* margin: 0; */
+    padding: 8px 10px;
+    /* margin-left: 10px; */
+
+    &:hover {
+      background-color: #38444d;
+      border-radius: 20px;
+    }
+    & .fa-solid {
+      color: #9763f6;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+  }
+
+  & .user {
+    & a {
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+      border: 2px solid var(--primaryColor);
+      border-radius: 50%;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+      & .fa-user {
+        color: var(--primaryColor);
+        margin-left: 5px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        background-color: transparent;
+        border: 2px solid white;
+
+        & .fa-user {
+          color: white;
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  margin: 50px 0;
+
+  & h2 {
+    text-align: center;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    text-transform: capitalize;
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 5000px) {
+  .left-side .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1284px) {
+  .right-side .job {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .right-side .spaces {
+    display: none;
+  }
+}
+
+@media (max-width: 1095px) {
+  .right-side .certificates {
+    display: none;
+  }
+}
+
+@media (max-width: 955px) {
+  .left-side {
+    & input {
+      display: none;
+    }
+
+    & .fa-magnifying-glass {
+      transform: translateX(10px);
+      color: white;
+    }
+
+    & .fa-circle-half-stroke {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 776px) {
+  .left-side {
+    & a {
+      display: none;
+    }
+
+    & .fa-magnifying-glass {
+      transform: translateX(160px);
+    }
+
+    & .menu {
+      display: block;
+      width: max-content;
+      line-height: 65px;
+    }
+  }
+}
+
+@media (max-width: 535px) {
+  .left-side {
+    .fa-magnifying-glass {
+      transform: translateX(30px);
+    }
+
+    .fa-circle-half-stroke {
+      transform: translateX(50px);
+    }
+  }
+
+  .right-side {
+    .green-school {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .right-side .user {
+    display: none;
+  }
+}
