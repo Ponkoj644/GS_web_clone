@@ -16,6 +16,8 @@ body {
   width: 100%;
   font-family: "Source Sans 3", sans-serif;
   background-color: #ededed;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -47,6 +49,97 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  & .dropdown-btn {
+    position: relative;
+    color: #fff;
+    width: max-content;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 10px;
+    display: none;
+    transition: all 0.2s ease-in-out;
+
+    & span {
+      line-height: 65px;
+    }
+
+    & .dropdown {
+      position: absolute;
+      top: 65px;
+      left: -100px;
+      background-color: #282a35;
+      /* width: 776px; */
+      width: 100vw;
+      display: none;
+      transition: all 0.2s ease-in-out;
+
+      & a {
+        position: relative;
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgb(67, 68, 74);
+        font-size: 20px;
+        font-weight: normal;
+
+        &:hover {
+          background-color: #fff;
+          color: #1d2a35;
+        }
+
+        & .fa-solid {
+          position: absolute;
+          right: 10%;
+          bottom: 50%;
+          transform: translate(50%, 50%);
+          font-size: 23px;
+        }
+      }
+
+      & .social {
+        width: 100%;
+        margin-top: 50px;
+        padding: 15px 10px;
+        background-color: #282a35;
+        color: #fff;
+
+        & a {
+          display: inline-block;
+          border: 2px solid transparent;
+          font-size: 25px;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background-color: transparent;
+            color: var(--primaryColor) !important;
+            border-bottom: 2px solid var(--primaryColor);
+          }
+        }
+      }
+
+      & .close-btn {
+        position: relative;
+        text-align: end;
+        margin-top: 20px;
+
+        & .fa-solid {
+          font-size: 30px;
+          margin-right: 25px;
+          padding: 15px 20px;
+          border-radius: 8px;
+
+          &:hover {
+            background-color: #fff;
+            color: #1d2a35;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background-color: var(--primaryColor);
+    }
+  }
 
   & a {
     display: flex;
@@ -169,7 +262,7 @@ header {
 }
 
 @media (max-width: 5000px) {
-  .left-side .menu {
+  .left-side .dropdown-btn {
     display: none;
   }
 }
@@ -218,10 +311,12 @@ header {
       transform: translateX(160px);
     }
 
-    & .menu {
+    & .dropdown-btn {
       display: block;
-      width: max-content;
-      line-height: 65px;
+    }
+
+    & .dropdown-btn:hover .dropdown {
+      display: block;
     }
   }
 }
