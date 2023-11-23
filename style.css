@@ -59,7 +59,6 @@ header {
     padding: 0 10px;
     display: none;
     transition: all 0.2s ease-in-out;
-
     & span {
       line-height: 65px;
     }
@@ -70,7 +69,7 @@ header {
       left: -100px;
       background-color: #282a35;
       /* width: 776px; */
-      width: 100vw;
+      width: 490px;
       display: none;
       transition: all 0.2s ease-in-out;
 
@@ -98,7 +97,7 @@ header {
 
       & .social {
         width: 100%;
-        margin-top: 50px;
+        margin: 20px 0px;
         padding: 15px 10px;
         background-color: #282a35;
         color: #fff;
@@ -313,6 +312,7 @@ header {
 
     & .dropdown-btn {
       display: block;
+      z-index: 1;
     }
 
     & .dropdown-btn:hover .dropdown {
@@ -321,6 +321,7 @@ header {
   }
 }
 
+/*  */
 @media (max-width: 535px) {
   .left-side {
     .fa-magnifying-glass {
@@ -344,3 +345,130 @@ header {
     display: none;
   }
 }
+/* Header End */
+
+/* Sub top nav start  */
+
+.sub-top-nav {
+  background-color: #272a35;
+  width: 100%;
+  height: auto;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.sub-top-nav::-webkit-scrollbar {
+  width: 0px;
+}
+
+.sub-top-nav a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 15px;
+
+  &:hover {
+    background-color: black;
+  }
+}
+/* Sub top nav end  */
+
+/* Hero section Start */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  background-image: url(./Images/hero-bg.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .learn-to-code {
+    & h1 {
+      color: white;
+      font-size: 65px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    & p {
+      color: #fff4a3;
+      font-weight: 700;
+      margin: 10px 0px 30px 0px;
+      font-size: 22px;
+    }
+
+    & .input-box {
+      background-color: var(--primaryColor);
+      height: 40px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & input {
+        width: 350px;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 20px 0px 0px 20px;
+        padding-left: 20px;
+      }
+      & i {
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+    & a {
+      display: inline-block;
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 30px !important;
+
+      &:hover {
+        color: #fff4a3;
+      }
+    }
+  }
+
+  .flot-image {
+    position: absolute;
+    right: 12%;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    & .flot-image {
+      display: none;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-section {
+    & .learn-to-code {
+      & h1 {
+        font-size: 40px;
+      }
+      & p {
+        font-size: 16px;
+      }
+      & .input-box {
+        width: 75%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+/* Hero section End */
